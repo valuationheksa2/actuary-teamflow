@@ -1,0 +1,9 @@
+{
+  "name": "teamflow-zip-build",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Extract and build the TeamFlow release on Netlify",
+  "scripts": { "build": "node prepare-release.cjs" },
+  "engines": { "node": ">=22" },
+  "dependencies": { "adm-zip": "0.5.16" }
+}
