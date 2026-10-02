@@ -10,6 +10,17 @@
   port = 8888
   targetPort = 3000
 
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+    Service-Worker-Allowed = "/"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "no-cache"
+
 [[redirects]]
   from = "/api/auth/*"
   to = "/.netlify/functions/auth/:splat"

@@ -10,7 +10,7 @@ const root = __dirname;
 const archivePath = path.join(root, 'teamflow-v2.1-netlify.zip');
 const target = path.resolve(root, 'app');
 const marker = path.join(target, '.teamflow-generated');
-const expectedHash = '7944bed79fe4774b5dfb11bb4c6ec758812dd650fd944ed491996a7ad9526635';
+const expectedHash = '1c813fd58c37261c9d939c071f3219e5bb040933715e2244ffe7c95f8585de94';
 
 function extractRelease() {
   const bytes = fs.readFileSync(archivePath);
