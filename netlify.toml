@@ -12,47 +12,9 @@
   status = 200
   force = true
 
-[[redirects]]
-  from = "/.netlify/functions/team"
-  to = "/.netlify/functions/maintenance"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/.netlify/functions/works"
-  to = "/.netlify/functions/maintenance"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/.netlify/functions/auth"
-  to = "/.netlify/functions/maintenance"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/.netlify/functions/auth/*"
-  to = "/.netlify/functions/maintenance"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/.netlify/functions/digest"
-  to = "/.netlify/functions/maintenance"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/.netlify/functions/notifications"
-  to = "/.netlify/functions/maintenance"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/.netlify/functions/activity"
-  to = "/.netlify/functions/maintenance"
-  status = 200
-  force = true
+# The maintenance deploy contains only the maintenance function.
+# Original direct function URLs are absent (404); /.netlify sources
+# cannot be used in redirect rules.
 
 [[headers]]
   for = "/*"
