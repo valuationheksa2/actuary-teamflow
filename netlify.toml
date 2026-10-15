@@ -6,6 +6,14 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Moves upcoming work to Ongoing once its start date arrives (team timezone).
+[functions."auto-start"]
+  schedule = "@hourly"
+
+# Daily overdue push alerts at 10:30 Asia/Jakarta (03:30 UTC).
+[functions."overdue-alerts"]
+  schedule = "30 3 * * *"
+
 [dev]
   port = 8888
   targetPort = 3000

@@ -9,6 +9,8 @@ Upload these six files to the root of your private GitHub repository using **Add
 5. `prepare-release.cjs`
 6. `README.md`
 
+**Release 2.2 (Oct 2026):** upload all six files over the existing ones in one commit. The ZIP keeps its `teamflow-v2.1-netlify.zip` name so it replaces the old file, but `prepare-release.cjs` now expects the 2.2 checksum, so the two must go up together. This release adds two scheduled functions declared in `netlify.toml` (`auto-start` hourly, `overdue-alerts` daily at 10:30 Jakarta time); Netlify runs scheduled functions on published production deploys only. Web push alerts need `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY` and `VAPID_SUBJECT` set in Netlify's environment variables; without them TeamFlow still shows notifications while it is open.
+
 The ZIP stays a ZIP on GitHub. Netlify's build extracts it into `app/`, installs the app's locked dependencies, checks the app, and bundles its API functions. You do not need to upload any folders or run Netlify CLI locally.
 
 ## New Netlify staging project
