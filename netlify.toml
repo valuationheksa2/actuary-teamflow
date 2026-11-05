@@ -10,6 +10,10 @@
 [functions."auto-start"]
   schedule = "@hourly"
 
+# Reminds attendees of meetings starting within the next hour.
+[functions."meeting-reminders"]
+  schedule = "@hourly"
+
 # Daily overdue push alerts at 10:30 Asia/Jakarta (03:30 UTC).
 [functions."overdue-alerts"]
   schedule = "30 3 * * *"

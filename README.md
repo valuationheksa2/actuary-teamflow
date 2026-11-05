@@ -9,7 +9,7 @@ Upload these six files to the root of your private GitHub repository using **Add
 5. `prepare-release.cjs`
 6. `README.md`
 
-**Release 2.3 (Oct 2026):** upload all six files over the existing ones in one commit. The ZIP keeps its `teamflow-v2.1-netlify.zip` name so it replaces the old file, but `prepare-release.cjs` expects the 2.3 checksum, so the two must go up together. This release adds one server function (`reads`, for unread-note badges); it needs no new Netlify settings. The scheduled functions (`auto-start` hourly, `overdue-alerts` daily at 10:30 Jakarta time) and the web push keys (`VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`) from 2.2 stay as they are.
+**Release 2.4 (Nov 2026):** upload all six files over the existing ones in one commit. The ZIP keeps its `teamflow-v2.1-netlify.zip` name so it replaces the old file, but `prepare-release.cjs` expects the 2.4 checksum, so the two must go up together. This release adds three server functions (`meetings`, `meeting-reminders` and `absences`), and `netlify.toml` schedules `meeting-reminders` hourly. It needs no new Netlify settings, and existing data needs no migration. The other scheduled functions (`auto-start` hourly, `overdue-alerts` daily at 10:30 Jakarta time) and the web push keys (`VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`) stay as they are.
 
 The ZIP stays a ZIP on GitHub. Netlify's build extracts it into `app/`, installs the app's locked dependencies, checks the app, and bundles its API functions. You do not need to upload any folders or run Netlify CLI locally.
 
